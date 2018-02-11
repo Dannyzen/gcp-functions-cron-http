@@ -1,9 +1,11 @@
 {
-  "name": "functions",
-  "description": "Cloud Functions for Firebase",
-  "dependencies": {
-    "firebase-admin": "^4.1.2",
-    "firebase-functions": "^0.5"
+  "name": "gcp-function-cron-http",
+  "version": "1.0.0",
+  "description": "Demo function to be executed by a GAE Cron Job.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "private": true
+  "author": "Earl Gay",
+  "license": "Apache-2.0"
 }

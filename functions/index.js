@@ -12,9 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-var functions = require('firebase-functions');
-
-exports.hourly_job =
-  functions.pubsub.topic('hourly-tick').onPublish((event) => {
-    console.log("This job is ran every hour!")
-  });
+exports.scheduledfunction = (req, res) => {
+  if (req.headers["cronrequest"] === "true") {
+    console.log("Header validated. Function executing.");
+    res.status(200).send("Success"); // Function logic
+  } else {
+    console.log("Header not validated. Function aborting.")
+    res.status(200).send("Failed"); // Aborted due to no header
+  }
+};
