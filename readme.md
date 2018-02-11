@@ -1,4 +1,7 @@
 # App Engine Cron with Google Cloud Functions
+
+> This project is a fork of the [firebase/functions-cron](https://github.com/firebase/functions-cron) project, but modified to use purely HTTP triggers instead of Pub/Sub.
+
 Google App Engine provides a Cron service. Using this service for scheduling, you can build an application to
 reliably schedule tasks which can trigger Google Cloud Functions.
 
